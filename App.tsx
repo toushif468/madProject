@@ -23,10 +23,20 @@ const App = () => {
     //     <Stack.Screen name={"LOGIN"} component={LoginScreen} />
     //   </Stack.Navigator>
     // </NavigationContainer>
+    <NavigationContainer>
+       <Stack.Navigator screenOptions={{
+          headerShown: false,
+        }}>
+           <Stack.Screen name={"HOME"} component={HomeScreen} />
+          <LoginScreen /> 
+        <Stack.Screen name={"LOGIN"} component={LoginScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
 
-    <View>
-      <Text>Hello world</Text>
-    </View>
+
+    // <View>
+    //   <Text>Hello world</Text>
+    // </View>
 
   );
 }
