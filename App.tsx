@@ -2,7 +2,9 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
-// import HomeScreen from './src/screen/HomeScreen';
+
+import { colors } from './src/utils/color';
+import HomeScreen from './src/screen/HomeScreen';
 // import LoginScreen from './src/screen/LoginScreen';
 
 
@@ -10,33 +12,13 @@ const Stack = createNativeStackNavigator();
 
 const App = () => {
 
-
-
   return (
 
-    // <NavigationContainer>
-    //   <Stack.Navigator screenOptions={{
-    //       headerShown: false,
-    //     }}>
-    //       {/* <Stack.Screen name={"HOME"} component={HomeScreen} />
-    //       <LoginScreen /> */}
-    //     <Stack.Screen name={"LOGIN"} component={LoginScreen} />
-    //   </Stack.Navigator>
-    // </NavigationContainer>
-    <NavigationContainer>
-       <Stack.Navigator screenOptions={{
-          headerShown: false,
-        }}>
-           <Stack.Screen name={"HOME"} component={HomeScreen} />
-          <LoginScreen /> 
-        <Stack.Screen name={"LOGIN"} component={LoginScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-
-
-    // <View>
-    //   <Text>Hello world</Text>
-    // </View>
+    <View>
+      <HomeScreen />
+      
+      {/* <Text style={styles.title}> Hello World</Text> */}
+    </View>
 
   );
 }
@@ -49,5 +31,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  }, title: {
+    fontSize: 45,
+    // fontFamily: fonts.SemiBold, //not working
+    fontWeight: 'normal',
+    paddingHorizontal: 20,
+    textAlign: "center",
+    color: colors.primary,
+    marginTop: 40,
   },
 });
