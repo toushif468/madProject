@@ -9,7 +9,7 @@ const HomeScreen = () => {
         <View style={styles.pageContainer}>
           <View style={styles.container}>
             <Image style={styles.logo} source={require("../assets/logo.png")} />
-            <Image style={styles.bannerImage} source={require("../assets/backgroundone.svg")} />
+            <Image style={styles.bannerImage} source={require("../assets/backgroundone.png")} />
             <Text style={styles.title}>Lorem ipsum dolor.</Text>
             <Text style={styles.subTitle}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione praesentium inventore, minima quas accusantium consectetur laboriosam eum quo perspiciatis maiores.</Text>
                 <TouchableOpacity style={styles.getStartedButton}>
@@ -32,14 +32,10 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
 
         justifyContent: 'center',
-        // borderWidth: 1,
-        // borderColor: 'blue'
+
 
     }, container: {
-        // flex: 1,
-        borderColor: 'red',
-        borderWidth: 2,
-        backgroundColor: "bottle green",
+
         alignItems: "center",
         width: '90%',
 
@@ -65,7 +61,6 @@ const styles = StyleSheet.create({
         fontSize: 16,
         textAlign: 'center',
         color: colors.secondary,
-        // fontFamily: fonts.Medium,
         marginTop: 40,
         marginBottom: 40,
         fontWeight: 'normal',
