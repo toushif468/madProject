@@ -28,14 +28,18 @@ const LoginScreen = () => {
           onChangeText={setPassword}
         />
 
-        <TouchableOpacity style={styles.getStartedButton}>
+        <TouchableOpacity>
+          <Text style={styles.forgotPasswordText}>Forgot password?</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.getSignInButton}>
           <Text style={styles.getStartedText}>Sign In</Text>
         </TouchableOpacity>
 
         <View style={styles.signUpTextContainer}>
-          <Text>Already have an account? </Text>
+          <Text>Don't have an account? </Text>
           <TouchableOpacity>
-            <Text style={styles.signUpText}>Sign In</Text>
+            <Text style={styles.signUpText}>Sign Up</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -79,22 +83,28 @@ const styles = StyleSheet.create({
     borderColor: '#ccc',
     borderRadius: 5,
   },
-  getStartedButton: {
+  getSignInButton: {
     backgroundColor: '#50C2C9',
     padding: 15,
     borderRadius: 5,
+    marginTop: 20,
+    marginBottom: 20,
     width: '100%',
     alignItems: 'center',
   },
   getStartedText: {
     color: '#fff',
     fontSize: 16,
-  }, signUpTextContainer: {
+  },
+  signUpTextContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     marginTop: 10,
-  }, signUpText: {
+  },
+  signUpText: {
     color: '#50C2C9',
     fontWeight: 'bold',
+  }, forgotPasswordText: {
+    color: '#50C2C9',
   },
 });
