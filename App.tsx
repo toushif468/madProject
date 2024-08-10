@@ -6,6 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { colors } from './src/utils/color';
 import HomeScreen from './src/screen/HomeScreen';
 import SignUp from './src/screen/SignUp';
+import LoginScreen from './src/screen/LoginScreen';
 // import LoginScreen from './src/screen/LoginScreen';
 
 
@@ -17,8 +18,9 @@ const App = () => {
 
     <View>
       {/* <HomeScreen /> */}
-      <SignUp />
+      {/* <SignUp /> */}
       {/* <Text style={styles.title}> Hello World</Text> */}
+      <LoginScreen />
     </View>
 
   );

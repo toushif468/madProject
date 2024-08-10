@@ -15,7 +15,6 @@ const HomeScreen = () => {
                 <TouchableOpacity style={styles.getStartedButton}>
                     <Text style={styles.getStartedText}>Get Started</Text>
                 </TouchableOpacity>
-
           </View>
         </View>
 
