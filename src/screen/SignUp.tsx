@@ -5,7 +5,7 @@ const SignUp = () => {
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const [age, setAge] = useState('');
+    const [email, setEmail] = useState('');
 
     return (
         <View style={styles.pageContainer}>
@@ -18,6 +18,14 @@ const SignUp = () => {
                     placeholder="Name"
                     value={name}
                     onChangeText={setName}
+                />
+
+                <TextInput
+                    style={styles.input}
+                    placeholder="Email"
+                    value={email}
+                    onChangeText={setEmail}
+                    keyboardType="email-address"
                 />
 
                 <TextInput
@@ -36,17 +44,16 @@ const SignUp = () => {
                     onChangeText={setConfirmPassword}
                 />
 
-                <TextInput
-                    style={styles.input}
-                    placeholder="Age"
-                    value={age}
-                    onChangeText={setAge}
-                    keyboardType="numeric"
-                />
-
                 <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>Sign Up</Text>
+                    <Text style={styles.buttonText}>Register</Text>
                 </TouchableOpacity>
+
+                <View style={styles.signInTextContainer}>
+                    <Text>Already have an account? </Text>
+                    <TouchableOpacity>
+                        <Text style={styles.signInText}>Sign In</Text>
+                    </TouchableOpacity>
+                </View>
             </View>
         </View>
     );
@@ -87,11 +94,21 @@ const styles = StyleSheet.create({
         padding: 15,
         borderRadius: 5,
         marginTop: 20,
+        marginBottom: 20,
         width: '100%',
         alignItems: 'center',
     },
     buttonText: {
         color: '#fff',
         fontSize: 16,
+    },
+    signInTextContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginTop: 10,
+    },
+    signInText: {
+        color: '#50C2C9',
+        fontWeight: 'bold',
     },
 });
