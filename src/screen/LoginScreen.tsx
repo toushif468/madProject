@@ -31,6 +31,13 @@ const LoginScreen = () => {
         <TouchableOpacity style={styles.getStartedButton}>
           <Text style={styles.getStartedText}>Sign In</Text>
         </TouchableOpacity>
+
+        <View style={styles.signUpTextContainer}>
+          <Text>Already have an account? </Text>
+          <TouchableOpacity>
+            <Text style={styles.signUpText}>Sign In</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
@@ -82,5 +89,12 @@ const styles = StyleSheet.create({
   getStartedText: {
     color: '#fff',
     fontSize: 16,
+  }, signUpTextContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 10,
+  }, signUpText: {
+    color: '#50C2C9',
+    fontWeight: 'bold',
   },
 });
