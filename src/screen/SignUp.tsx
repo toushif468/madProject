@@ -54,6 +54,20 @@ const SignUp = () => {
                         <Text style={styles.signInText}>Sign In</Text>
                     </TouchableOpacity>
                 </View>
+                <View style={styles.socialButtonsContainer}>
+                    <TouchableOpacity style={styles.getSocialButton}>
+                        <Image style={styles.socialIcon} source={require("../assets/google_media_social_icon.png")} />
+
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.getSocialButton}>
+                        <Image style={styles.socialIcon} source={require("../assets/apple_icon.png")} />
+
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.getSocialButton}>
+                        <Image style={styles.socialIcon} source={require("../assets/facebook_f_icon.png")} />
+
+                    </TouchableOpacity>
+                </View>
             </View>
         </View>
     );
@@ -110,5 +124,24 @@ const styles = StyleSheet.create({
     signInText: {
         color: '#50C2C9',
         fontWeight: 'bold',
+    }, socialButtonsContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        width: '100%',
+        marginTop: 20,
+    },
+    getSocialButton: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: '#50C2C9',
+        padding: 15,
+        borderRadius: 5,
+        width: '30%',
+        justifyContent: 'center',
+    },
+    socialIcon: {
+        height: 24,
+        width: 24,
+        marginRight: 10,
     },
 });

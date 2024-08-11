@@ -7,26 +7,26 @@ import { colors } from './src/utils/color';
 import HomeScreen from './src/screen/HomeScreen';
 import SignUp from './src/screen/SignUp';
 import LoginScreen from './src/screen/LoginScreen';
-// import LoginScreen from './src/screen/LoginScreen';
-
 
 const Stack = createNativeStackNavigator();
 
 const App = () => {
-
   return (
-
-    <View>
-      {/* <HomeScreen /> */}
-      {/* <SignUp /> */}
-      {/* <Text style={styles.title}> Hello World</Text> */}
-      <LoginScreen />
-    </View>
-
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="HomeScreen">
+        <Stack.Screen name="HomeScreen" component={HomeScreen} />
+        <Stack.Screen name="SignUp" component={SignUp} />
+        <Stack.Screen name="LoginScreen" component={LoginScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+    // <View>
+    //   {/* <LoginScreen /> */}
+    //   <SignUp />
+    // </View>
   );
-}
+};
 
-export default App
+export default App;
 
 const styles = StyleSheet.create({
   container: {
@@ -34,12 +34,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  }, title: {
+  },
+  title: {
     fontSize: 45,
-    // fontFamily: fonts.SemiBold, //not working
     fontWeight: 'normal',
     paddingHorizontal: 20,
-    textAlign: "center",
+    textAlign: 'center',
     color: colors.primary,
     marginTop: 40,
   },
