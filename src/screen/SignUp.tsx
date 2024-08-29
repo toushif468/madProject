@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
 import React, { useState } from 'react';
 
-const SignUp = () => {
+const SignUp = ({ navigation }) => {
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -11,7 +11,7 @@ const SignUp = () => {
         <View style={styles.pageContainer}>
             <View style={styles.container}>
                 <Image style={styles.logo} source={require("../assets/logo.png")} />
-                <Image style={styles.bannerImage} source={require("../assets/backgroundtwo.png")} />
+                {/* <Image style={styles.bannerImage} source={require("../assets/backgroundtwo.png")} /> */}
 
                 <TextInput
                     style={styles.input}
@@ -50,8 +50,8 @@ const SignUp = () => {
 
                 <View style={styles.signInTextContainer}>
                     <Text>Already have an account? </Text>
-                    <TouchableOpacity>
-                        <Text style={styles.signInText}>Sign In</Text>
+                    <TouchableOpacity onPress={() => navigation.navigate('LoginScreen')}>
+                    <Text style={styles.signInText}>Sign In</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.socialButtonsContainer}>
